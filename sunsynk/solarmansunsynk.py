@@ -25,6 +25,7 @@ class SolarmanSunsynk(Sunsynk):  # pylint: disable=invalid-name
         """Connect."""
         url = urlparse(f"{self.port}")
         self.allow_gap = 10
+        self.timeout = 20
         self.client = PySolarmanV5Async(
             address=url.hostname,
             serial=int(self.dongle_serial_number),

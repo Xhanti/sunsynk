@@ -306,7 +306,7 @@ async def main(loop: AbstractEventLoop) -> None:  # noqa
         await write_sensors()
 
         polltask = asyncio.create_task(poll_sensors())
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
         try:
             await polltask
         except asyncio.TimeoutError as exc:

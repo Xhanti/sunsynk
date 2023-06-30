@@ -13,7 +13,7 @@ WORKDIR /usr/src/app
 COPY . ./
 
 # local test - install sunsynk
-# RUN pip3 install -e sunsynk[pymodbus,umodbus]
+RUN pip3 install -e sunsynk[pymodbus,umodbus]
 
 #CMD ["tail", "-f", "/dev/null"]
 CMD ["./run.py"]
